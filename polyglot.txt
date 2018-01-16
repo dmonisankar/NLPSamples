@@ -1,0 +1,30 @@
+from polyglot.text import Text
+
+In [2]: ẗext = """El presidente de la Generalitat de Cataluña,
+                  Carles Puigdemont, ha afirmado hoy a la alcaldesa 
+                  de Madrid, Manuela Carmena, que en su etapa de 
+                  alcalde de Girona (de julio de 2011 a enero de 2016) 
+                  hizo una gran promoción de Madrid."""
+
+In [3]: ptext = Text(text)
+In [4]: ptext.entities
+Out[4]: 
+[I-ORG(['Generalitat', 'de']),
+ I-LOC(['Generalitat', 'de', 'Cataluña']),
+ I-PER(['Carles', 'Puigdemont']),
+ I-LOC(['Madrid']),
+ I-PER(['Manuela', 'Carmena']),
+ I-LOC(['Girona']),
+ I-LOC(['Madrid'])]
+ 
+ 
+ 
+ # Create a new text object using Polyglot's Text class: txt
+txt = Text(article)
+
+# Print each of the entities found
+for ent in txt.entities:
+    print(ent)
+    
+# Print the type of each entity
+x`print(type(ent))

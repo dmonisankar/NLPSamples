@@ -1,0 +1,8 @@
+from sklearn.naive_byes import MultinomialNB
+from  sklearn inport metrics
+
+nb_classifier = MultinomialNB()
+nb_classifier.fit(count_train, y_train)
+pred = nb_classifier.predict(count_test)
+
+metrics.accuracy_score(y_test, pred)

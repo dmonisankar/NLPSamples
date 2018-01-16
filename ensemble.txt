@@ -1,0 +1,12 @@
+# Create a set of spaCy entities keeping only their text: spacy_ents
+spacy_ents = {e.text for e in nlp(article).ents} 
+
+# Create a set of the intersection between the spacy and polyglot entities: ensemble_ents
+ensemble_ents = spacy_ents.intersection(poly_ents)
+
+# Print the common entities
+print(ensemble_ents)
+
+# Calculate the number of entities not included in the new ensemble set of entities: num_left_out
+num_left_out = len(spacy_ents.union(poly_ents)) - len(ensemble_ents)
+print(num_left_out)
